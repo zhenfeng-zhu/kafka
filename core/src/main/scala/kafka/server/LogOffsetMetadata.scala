@@ -37,6 +37,13 @@ object LogOffsetMetadata {
  *  1. the message offset
  *  2. the base message offset of the located segment
  *  3. the physical position on the located segment
+ *
+ * 单纯的就是一个pojo类。
+ * 1. messageOffset: 消息位移值，我们总说的高水位的值，起始就是这个变量的值
+ * 2. segmentBaseOffset： 保存该位移值所在日志段的起始位移。
+ *                        主要用来辅助计算两条消息是不是在同一个日志段里面。
+ * 3. relativePositionSegment：保存该位移值所在日志段的物理磁盘位置。这个字段在计算两个位移之间的物理磁盘的位置差异时很有用。
+ *                            比如在读日志的时候，假设明确指定了要读1MB，那么用这两个值相减，就得出了是否超过1MB了。
  */
 case class LogOffsetMetadata(messageOffset: Long,
                              segmentBaseOffset: Long = Log.UnknownOffset,
