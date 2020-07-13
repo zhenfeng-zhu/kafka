@@ -25,6 +25,7 @@ case object FetchLogEnd extends FetchIsolation
 case object FetchHighWatermark extends FetchIsolation
 case object FetchTxnCommitted extends FetchIsolation
 
+// 读取消息返回的值，主要包含消息集合和位移等元数据的数据信息
 case class FetchDataInfo(fetchOffsetMetadata: LogOffsetMetadata,
                          records: Records,
                          firstEntryIncomplete: Boolean = false,
