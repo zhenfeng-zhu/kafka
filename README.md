@@ -1,7 +1,7 @@
 Apache Kafka 源码阅读计划
 =================
 
-- 日志模块
+## 日志模块
 
 - [x] 日志段
 
@@ -9,7 +9,7 @@ Apache Kafka 源码阅读计划
 
 - [ ] 索引
 
-- 请求处理模块
+## 请求处理模块
 
 - [ ] 请求通道
 
@@ -17,7 +17,7 @@ Apache Kafka 源码阅读计划
 
 - [ ] KafkaApis
 
-- Controller模块
+## Controller模块
 
 - [ ] Controller元数据
 
@@ -27,7 +27,7 @@ Apache Kafka 源码阅读计划
 
 - [ ] Controller选举
 
-- 状态机模块
+## 状态机模块
 
 - [ ] TopicDeletionManager
 
@@ -35,13 +35,13 @@ Apache Kafka 源码阅读计划
 
 - [ ] PartitionStateMachine
 
-- 延迟操作模块
+## 延迟操作模块
 
 - [ ] TimingWheel
 
 - [ ] DelayedOperation
 
-- 副本管理模块
+## 副本管理模块
 
 - [ ] AbstractFetcherThread
 
@@ -51,7 +51,7 @@ Apache Kafka 源码阅读计划
 
 - [ ] MetadataCache
 
-- 消费者组管理模块
+## 消费者组管理模块
 
 - [ ] 消费者组元数据
 
